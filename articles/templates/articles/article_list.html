@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+    <h2 style="text-align:center;margin:20px">New Articles</h2>
+    <div class="articles">
+      <hr>
+    {% for article in items %}
+
+       <h3 style="margin:10px"><a href="./{{article.slug}}">{{article.title}}</a></h3>
+       <p>{{article.snippet}}</p>
+       <p>{{article.date}}</p>
+    {% endfor %}
+   </div>
+
+{% include 'articles/pagination.html' %}
+
+{% endblock %}

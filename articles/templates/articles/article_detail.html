@@ -1,0 +1,33 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="post-preview article-detail">
+        <img  class="pics" src="{{article.thumb.url}}" />
+
+
+          <h2 class="post-title">
+            {{article.title}}
+          </h2>
+
+                <p>{{article.body}}</p>
+        <p>{{article.date}}</p>
+      <!-- Pager -->
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
