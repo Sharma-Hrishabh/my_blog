@@ -1,6 +1,8 @@
 {% extends 'base_layout.html' %}
 {% block content %}
     <h2 style="text-align:center;margin:20px">New Articles</h2>
+    <div class="container">
+
     <div class="articles">
       <hr>
     {% for article in items %}
@@ -11,6 +13,7 @@
     {% endfor %}
    </div>
 
+ </div>
 {% include 'articles/pagination.html' %}
 
 {% endblock %}
