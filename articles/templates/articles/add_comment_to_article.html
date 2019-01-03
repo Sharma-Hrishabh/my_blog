@@ -1,0 +1,9 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<h1>New comment</h1>
+ <form action="{% url 'articles:add_comment_to_article' %}" method="post">
+     {% csrf_token %}
+     {{ form.as_p }}
+     <button type="submit" class="save btn btn-default">Send</button>
+ </form>
+{% endblock %}
