@@ -25,7 +25,7 @@
   <div class="row">
   <div class="col-lg-12">
     <hr>
-    <a href="{% url 'articles:add_comment' slug=article.slug %}">Add Comment</a>
+    <a href="{% url 'articles:add_comment' slug=article.slug %}" class="btn btn-default">Add Comment</a>
 {% for comment in article.comments.all %}
     <div class="comment">
         <div class="date">{{ comment.created_date }}</div>
